@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head> 
-<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2025/11/02/17/20251102173748-PGXCTZDQ.js" defer></script>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ignacio Esteban - Generative AI Portfolio</title>
+
+  <!-- Botpress Webchat -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/11/02/17/20251102173748-PGXCTZDQ.js" defer></script>
+
+  <!-- Styles -->
   <style>
-    body {
+    /* Reset some defaults */
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #e0eafc, #cfdef3);
       color: #333;
+      line-height: 1.6;
     }
+
     header {
       background: linear-gradient(to right, #667eea, #764ba2);
       color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 2rem 1rem;
     }
+
     .avatar {
       width: 120px;
       height: 120px;
@@ -27,54 +40,90 @@
       border: 3px solid white;
       margin-bottom: 1rem;
     }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
     nav {
       margin-top: 1rem;
     }
+
     nav a {
       color: white;
       margin: 0 1rem;
       text-decoration: underline;
       font-weight: bold;
     }
+
     section {
-      padding: 2rem;
+      padding: 3rem 1rem;
       max-width: 900px;
       margin: auto;
+      background: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #764ba2;
       border-bottom: 2px solid #764ba2;
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
+
     .submissions ul {
       list-style: none;
       padding: 0;
     }
+
     .submissions li {
       background: #f0f4ff;
       margin: 0.5rem 0;
       padding: 1rem;
       border-left: 5px solid #667eea;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <img src="https://github.com/nachoesteban/graph-ai-portfolio/blob/main/foto.png?raw=true" alt="Ignacio Esteban  <p>Generative AI for Work & Research Portfolio</p>
+    <img class="avatar" src="https://github.com/nachoesteban/graph-ai-portfolio/blob/main/foto.png?raw=true" alt="Ignacio Esteban">
+    <h1>Ignacio Esteban</h1>
+    <p>Generative AI for Work & Research Portfolio</p>
+
     <nav>
-      #aboutAbout Me</a>
-      #courseAbout the Course</a>
-      #submissionsWeekly Submissions</a>
+      <a href="#about">About Me</a>
+      <a href="#course">About the Course</a>
+      <a href="#submissions">Weekly Submissions</a>
     </nav>
   </header>
+
   <section id="about">
     <h2>About Me</h2>
-    <p>Pediatrician specializing in Infectious Disease Epidemiology and Public Health professional with 15 years of experience. Master of Public Health at the Johns Hopkins Bloomberg School of Public Health with a focus on Infectious Diseases and Vaccine Science and Policy. Primary research and work interests include the epidemiology of vaccine-preventable diseases, vaccine policy, and the comparative evaluation of vaccines, and vaccine clinical trials. Currently a Senior Policy Manager in Epidemic and Pandemic Preparedness at Gavi, the Vaccine Alliance and Associate Professor of Public Health at the Austral University School of Medicine.</p>
+    <p>Pediatrician specializing in Infectious Disease Epidemiology and Public Health with 15 years of experience. Master of Public Health from Johns Hopkins Bloomberg School of Public Health focusing on Infectious Diseases and Vaccine Science & Policy. My work interests include vaccine-preventable disease epidemiology, vaccine policy, comparative vaccine evaluation, and vaccine clinical trials. Currently, I am Senior Policy Manager in Epidemic & Pandemic Preparedness at Gavi, the Vaccine Alliance, and Associate Professor of Public Health at Austral University School of Medicine.</p>
   </section>
+
   <section id="course">
     <h2>About the Course</h2>
-    <p>This 8-week live cohort course introduces participants to no-code AI tools for automating tasks in research and professional settings. It covers topics such as document generation, data analysis, literature review, chatbot creation, and scientific communication. Learners gain hands-on experience with AI assistants and build real-world projects to enhance productivity. The course is designed for researchers and professionals seeking to integrate generative AI into their workflows.</p>
+    <p>This 8-week live cohort course introduces participants to no-code AI tools for automating research and professional tasks. Topics include document generation, data analysis, literature review, chatbot creation, and scientific communication. Learners gain hands-on experience with AI assistants and build real-world projects to enhance productivity. Designed for researchers and professionals aiming to integrate generative AI into their workflows.</p>
   </section>
+
   <section id="submissions" class="submissions">
     <h2>My Weekly Submissions</h2>
     <ul>
