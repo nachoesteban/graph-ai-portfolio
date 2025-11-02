@@ -5,18 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ignacio Esteban - Generative AI Portfolio</title>
 
-  <!-- Botpress Webchat -->
+  <!-- Optional: Botpress Webchat -->
   <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/11/02/17/20251102173748-PGXCTZDQ.js" defer></script>
+  <!-- If offline, this will fail gracefully -->
+  <script src="17/20251102173748-PGXCTZDQ.js" defer></script>
 
-  <!-- Styles -->
   <style>
-    /* Reset some defaults */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -41,20 +36,10 @@
       margin-bottom: 1rem;
     }
 
-    header h1 {
-      margin-bottom: 0.5rem;
-      font-size: 2rem;
-    }
+    header h1 { margin-bottom: 0.5rem; font-size: 2rem; }
+    header p { font-size: 1rem; font-weight: 300; }
 
-    header p {
-      font-size: 1rem;
-      font-weight: 300;
-    }
-
-    nav {
-      margin-top: 1rem;
-    }
-
+    nav { margin-top: 1rem; }
     nav a {
       color: white;
       margin: 0 1rem;
@@ -66,7 +51,7 @@
       padding: 3rem 1rem;
       max-width: 900px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255,255,255,0.8);
       margin-bottom: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -79,11 +64,7 @@
       margin-bottom: 1rem;
     }
 
-    .submissions ul {
-      list-style: none;
-      padding: 0;
-    }
-
+    .submissions ul { list-style: none; padding: 0; }
     .submissions li {
       background: #f0f4ff;
       margin: 0.5rem 0;
@@ -93,17 +74,15 @@
     }
 
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
+      nav a { display: block; margin: 0.5rem 0; }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img class="avatar" src="https://github.com/nachoesteban/graph-ai-portfolio/blob/main/foto.png?raw=true" alt="Ignacio Esteban">
+    <!-- Use a local image file stored in your repo -->
+    <img class="avatar" src="foto.png" alt="Ignacio Esteban">
     <h1>Ignacio Esteban</h1>
     <p>Generative AI for Work & Research Portfolio</p>
 
