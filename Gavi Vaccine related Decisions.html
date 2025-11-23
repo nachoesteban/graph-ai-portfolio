@@ -8,7 +8,6 @@
   <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
   <script src="https://cdn.botpress.cloud/webchat/v3.4/inject.js"></script>
   <script src="https://files.bpcontent.cloud/2025/11/23/14/20251123142020-MSAC0K3K.js" defer></script>
-  <!-- Google font (optional) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -16,8 +15,8 @@
       --card: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
       --glass: rgba(255,255,255,0.06);
       --muted: rgba(255,255,255,0.85);
-      --accent: #0078a8; /* gavi-like blue */
-      --accent-2: #00a09a; /* teal */
+      --accent: #0078a8;
+      --accent-2: #00a09a;
       --radius: 14px;
       color-scheme: light dark;
     }
@@ -34,77 +33,42 @@
       -moz-osx-font-smoothing:grayscale;
       padding:32px;
     }
-
-    /* container */
     .wrap{max-width:1100px;margin:0 auto}
-
-    /* header */
     header{display:flex;align-items:center;justify-content:space-between;gap:20px}
     .logo{
       display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit
     }
-    .logo-mark{width:56px;height:56px;border-radius:12px;background:var(--bg-1);display:grid;place-items:center;box-shadow:0 8px 30px rgba(8,63,90,0.12)}
-    .logo-mark svg{width:36px;height:36px;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.08))}
+    .logo-mark img{width:56px;height:56px;border-radius:12px}
     nav a{color:var(--accent);text-decoration:none;font-weight:600;margin-left:18px}
-
-    /* hero */
     .hero{
       margin-top:28px;padding:36px;border-radius:20px;background: linear-gradient(90deg, rgba(6,60,85,0.06), rgba(3,102,136,0.03));backdrop-filter: blur(6px);
       display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center
     }
     .hero h1{margin:0;font-size:34px;line-height:1.02}
     .hero p{margin:12px 0 0;color:#044058}
-
     .cta{display:flex;gap:10px;margin-top:18px}
     .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
     .btn.ghost{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1px rgba(0,120,168,0.12)}
-
-    /* info panel */
     .panel{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(11,46,68,0.06)}
     .metric{display:flex;gap:12px;align-items:center}
     .metric strong{font-size:18px}
-
-    /* sections */
     section{margin-top:28px;padding:28px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.7));box-shadow:0 8px 30px rgba(10,30,45,0.04)}
     section h2{margin-top:0}
     .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-
-    /* VIS cards */
     .card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));border:1px solid rgba(3,80,110,0.03)}
-
-    /* chatbot placeholder */
-    .chat{
-      display:flex;flex-direction:column;gap:12px
-    }
-    .chat-window{height:320px;border-radius:12px;padding:14px;border:1px solid rgba(3,80,110,0.06);background:linear-gradient(180deg, rgba(250,252,255,1), rgba(243,248,252,1));overflow:auto}
-    .chat-input{display:flex;gap:10px}
-    .chat-input input{flex:1;padding:12px;border-radius:10px;border:1px solid rgba(3,80,110,0.07)}
-
     footer{margin-top:28px;display:flex;justify-content:space-between;align-items:center;color:#08475f}
-
-    /* responsive */
     @media (max-width:900px){
       .hero{grid-template-columns:1fr;}
       .grid{grid-template-columns:1fr}
     }
-
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <a class="logo" href="#">
-        <div class="logo-mark" aria-hidden>
-          <!-- simple mark (keeps it generic) -->
-          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="32" cy="32" r="30" fill="url(#g)" />
-            <defs>
-              <linearGradient id="g" x1="0" x2="1">
-                <stop offset="0%" stop-color="#0078a8"/>
-                <stop offset="100%" stop-color="#00a09a"/>
-              </linearGradient>
-            </defs>
-          </svg>
+        <div class="logo-mark">
+          <img src="https://www.gavi.org/sites/default/files/gavi-logo.svg" alt="Gavi Logo">
         </div>
         <div>
           <div style="font-weight:800">Gavi • Vaccine Alliance</div>
@@ -112,9 +76,9 @@
         </div>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#about">About Gavi</a>
-        <a href="#vis">Vaccine Investment Strategy</a>
-        <a href="#chat">Chatbot</a>
+        <a href="https://www.gavi.org/" target="_blank" rel="noopener">About Gavi</a>
+        <a href="https://www.gavi.org/our-alliance/strategy/vaccine-investment-strategy-2024" target="_blank" rel="noopener">Vaccine Investment Strategy</a>
+        <a href="#chat-input" onclick="document.getElementById('chat-input').focus()">Chatbot</a>
       </nav>
     </header>
 
@@ -122,7 +86,7 @@
       <section class="hero" aria-labelledby="hero-title">
         <div>
           <h1 id="hero-title">Gavi, the Vaccine Alliance — Information Portal</h1>
-          <p>This page follows Gavi's visual language: blues and teals, soft gradients, accessible typography and clear sections. Designed as a static GitHub Pages‑ready file — no frameworks.</p>
+          <p>This page follows Gavi's visual language: blues and teals, soft gradients, accessible typography and clear sections.</p>
           <div class="cta">
             <button class="btn" onclick="document.getElementById('chat-input').focus()">Ask the chatbot</button>
             <a class="btn ghost" href="#vis">Read the VIS</a>
@@ -142,9 +106,7 @@
         <aside class="panel" aria-label="Quick links">
           <h3 style="margin:0 0 10px 0">Quick resources</h3>
           <ul style="margin:0;padding:0 0 0 18px;color:#063e50">
-            <li><a href="https://www.gavi.org/our-alliance/about" target="_blank" rel="noopener">About Gavi</a></li>
-            <li><a href="https://www.gavi.org/our-alliance/strategy/vaccine-investment-strategy-2024" target="_blank" rel="noopener">Vaccine Investment Strategy 2024</a></li>
-            <li><a href="#chat">Chatbot placeholder</a></li>
+            <li><a href="#chat-input" onclick="document.getElementById('chat-input').focus()">Chatbot</a></li>
           </ul>
         </aside>
       </section>
@@ -154,15 +116,14 @@
         <h2 id="about-title">About Gavi</h2>
         <div class="grid">
           <div class="card">
-            <p><strong>Gavi, the Vaccine Alliance</strong> is a global public–private partnership created in 2000 to improve access to new and underused vaccines for children living in the world’s poorest countries. Gavi works with governments, global health partners and industry to increase equitable and sustainable use of vaccines and strengthen health systems.</p>
-            <p style="margin-top:12px;font-size:13px;color:#08475f">This site pulls general background and strategy information from public Gavi resources to illustrate a course portfolio layout.</p>
+            <p><strong>Gavi, the Vaccine Alliance</strong> is a global public–private partnership created in 2000 to improve access to new and underused vaccines for children living in the world’s poorest countries. <a href="https://www.gavi.org/" target="_blank" rel="noopener">Learn more</a></p>
           </div>
 
           <div class="card">
-            <h4 style="margin-top:0">Key achievements (example highlights)</h4>
+            <h4 style="margin-top:0">Key achievements</h4>
             <ul>
               <li>Immunised over 1+ billion children since inception</li>
-              <li>Supported introduction of new vaccines, e.g. malaria in routine programmes</li>
+              <li>Supported introduction of new vaccines, e.g., malaria</li>
               <li>Operates global programmes to reduce vaccine-preventable disease burden</li>
             </ul>
           </div>
@@ -175,7 +136,7 @@
         <div class="grid">
           <div class="card">
             <h3 style="margin-top:0">What is VIS?</h3>
-            <p>The Vaccine Investment Strategy (VIS) is Gavi’s prioritisation framework for deciding which new and underused vaccines are supported and funded. The VIS balances public health impact, feasibility, financial sustainability and market shaping to maximise lives saved and support predictable planning for partners and manufacturers.</p>
+            <p>The Vaccine Investment Strategy (VIS) is Gavi’s prioritisation framework for deciding which new and underused vaccines are supported and funded. <a href="https://www.gavi.org/our-alliance/strategy/vaccine-investment-strategy-2024" target="_blank" rel="noopener">More details here</a></p>
           </div>
 
           <div class="card">
@@ -185,8 +146,17 @@
               <li>Technical appraisals: impact, cost-effectiveness, feasibility</li>
               <li>Prioritisation & Board decisions; funding windows and introductions</li>
             </ol>
-            <p style="margin-top:10px;font-size:13px;color:#08475f">For the official VIS document and details see the public Gavi VIS resources and insight papers.</p>
           </div>
+        </div>
+      </section>
+
+      <!-- Chat input placeholder -->
+      <section id="chat" class="chat">
+        <h2>Chatbot</h2>
+        <div id="chat-window" class="chat-window"></div>
+        <div class="chat-input">
+          <input type="text" id="chat-input" placeholder="Type your question…">
+          <button onclick="sendMessage()">Send</button>
         </div>
       </section>
 
@@ -199,7 +169,6 @@
   </div>
 
   <script>
-    // Simple client-side chat placeholder behavior (no backend calls)
     function appendMessage(who, text){
       const win = document.getElementById('chat-window');
       const el = document.createElement('div');
@@ -224,12 +193,9 @@
       if(!text) return;
       appendMessage('user', text);
       input.value = '';
-      // Placeholder reply — replace this with real backend call.
       setTimeout(()=>appendMessage('bot','(placeholder) I can answer course questions about Gavi and VIS once connected.'),600);
     }
     function escapeHtml(s){ return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
-
-    // Accessibility: keyboard submit
     document.getElementById('chat-input').addEventListener('keydown', function(e){ if(e.key === 'Enter'){ sendMessage(); }});
   </script>
 </body>
