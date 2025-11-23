@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gavi, the Vaccine Alliance Vaccine Related Decisions</title>
+  <meta name="description" content="Gavi, the Vaccine Alliance Vaccine Related Decisions" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1: linear-gradient(135deg,#0b6fa7 0%,#0ea5a4 45%,#60a5fa 100%);
+      --card: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      --glass: rgba(255,255,255,0.06);
+      --muted: rgba(255,255,255,0.85);
+      --accent: #0078a8; /* gavi-like blue */
+      --accent-2: #00a09a; /* teal */
+      --radius: 14px;
+      color-scheme: light dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(17,124,152,0.12), transparent),
+                  radial-gradient(900px 400px at 90% 90%, rgba(32,144,220,0.08), transparent),
+                  linear-gradient(180deg,#f7fbfd 0%, #eef6fb 100%);
+      color:#05293a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+    }
+
+    /* container */
+    .wrap{max-width:1100px;margin:0 auto}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{
+      display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit
+    }
+    .logo-mark{width:56px;height:56px;border-radius:12px;background:var(--bg-1);display:grid;place-items:center;box-shadow:0 8px 30px rgba(8,63,90,0.12)}
+    .logo-mark svg{width:36px;height:36px;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.08))}
+    nav a{color:var(--accent);text-decoration:none;font-weight:600;margin-left:18px}
+
+    /* hero */
+    .hero{
+      margin-top:28px;padding:36px;border-radius:20px;background: linear-gradient(90deg, rgba(6,60,85,0.06), rgba(3,102,136,0.03));backdrop-filter: blur(6px);
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center
+    }
+    .hero h1{margin:0;font-size:34px;line-height:1.02}
+    .hero p{margin:12px 0 0;color:#044058}
+
+    .cta{display:flex;gap:10px;margin-top:18px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1px rgba(0,120,168,0.12)}
+
+    /* info panel */
+    .panel{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(11,46,68,0.06)}
+    .metric{display:flex;gap:12px;align-items:center}
+    .metric strong{font-size:18px}
+
+    /* sections */
+    section{margin-top:28px;padding:28px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.7));box-shadow:0 8px 30px rgba(10,30,45,0.04)}
+    section h2{margin-top:0}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+    /* VIS cards */
+    .card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));border:1px solid rgba(3,80,110,0.03)}
+
+    /* chatbot placeholder */
+    .chat{
+      display:flex;flex-direction:column;gap:12px
+    }
+    .chat-window{height:320px;border-radius:12px;padding:14px;border:1px solid rgba(3,80,110,0.06);background:linear-gradient(180deg, rgba(250,252,255,1), rgba(243,248,252,1));overflow:auto}
+    .chat-input{display:flex;gap:10px}
+    .chat-input input{flex:1;padding:12px;border-radius:10px;border:1px solid rgba(3,80,110,0.07)}
+
+    footer{margin-top:28px;display:flex;justify-content:space-between;align-items:center;color:#08475f}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:1fr}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="#">
+        <div class="logo-mark" aria-hidden>
+          <!-- simple mark (keeps it generic) -->
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="30" fill="url(#g)" />
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0%" stop-color="#0078a8"/>
+                <stop offset="100%" stop-color="#00a09a"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <div style="font-weight:800">Gavi • Generative AI</div>
+          <div style="font-size:12px;color:rgba(5,41,58,0.7)">For Work & Research — Portfolio</div>
+        </div>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About Gavi</a>
+        <a href="#vis">Vaccine Investment Strategy</a>
+        <a href="#chat">Chatbot</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">Generative AI for Work & Research — Gavi the Vaccine Alliance style</h1>
+          <p>Example portfolio page that follows Gavi's visual language: blues and teals, soft gradients, accessible typography and clear sections. Designed to be a static GitHub Pages‑ready file — no frameworks.</p>
+          <div class="cta">
+            <button class="btn" onclick="document.getElementById('chat-input').focus()">Ask the chatbot</button>
+            <a class="btn ghost" href="#vis">Read the VIS</a>
+          </div>
+
+          <div style="display:flex;gap:12px;margin-top:18px">
+            <div class="panel" style="flex:1">
+              <div class="metric"><strong>1.1B+</strong><div style="font-size:13px;color:#04405a">children reached since 2000</div></div>
+            </div>
+            <div class="panel" style="width:220px">
+              <div style="font-size:13px;color:#04405a">Vaccine Investment Strategy · 2024</div>
+              <div style="font-size:12px;color:rgba(4,64,88,0.8);margin-top:8px">Prioritisation process for inclusion of new and underused vaccines.</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Quick links">
+          <h3 style="margin:0 0 10px 0">Quick resources</h3>
+          <ul style="margin:0;padding:0 0 0 18px;color:#063e50">
+            <li><a href="https://www.gavi.org/our-alliance/about" target="_blank" rel="noopener">About Gavi</a></li>
+            <li><a href="https://www.gavi.org/our-alliance/strategy/vaccine-investment-strategy-2024" target="_blank" rel="noopener">Vaccine Investment Strategy 2024</a></li>
+            <li><a href="#chat">Course chatbot placeholder</a></li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- About Gavi -->
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About Gavi</h2>
+        <div class="grid">
+          <div class="card">
+            <p><strong>Gavi, the Vaccine Alliance</strong> is a global public–private partnership created in 2000 to improve access to new and underused vaccines for children living in the world’s poorest countries. Gavi works with governments, global health partners and industry to increase equitable and sustainable use of vaccines and strengthen health systems.</p>
+            <p style="margin-top:12px;font-size:13px;color:#08475f">This site pulls general background and strategy information from public Gavi resources to illustrate a course portfolio layout.</p>
+          </div>
+
+          <div class="card">
+            <h4 style="margin-top:0">Key achievements (example highlights)</h4>
+            <ul>
+              <li>Immunised over 1+ billion children since inception</li>
+              <li>Supported introduction of new vaccines, e.g. malaria in routine programmes</li>
+              <li>Operates global programmes to reduce vaccine-preventable disease burden</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vaccine Investment Strategy -->
+      <section id="vis" aria-labelledby="vis-title">
+        <h2 id="vis-title">About Vaccine Investment Strategy (VIS)</h2>
+        <div class="grid">
+          <div class="card">
+            <h3 style="margin-top:0">What is VIS?</h3>
+            <p>The Vaccine Investment Strategy (VIS) is Gavi’s prioritisation framework for deciding which new and underused vaccines are supported and funded. The VIS balances public health impact, feasibility, financial sustainability and market shaping to maximise lives saved and support predictable planning for partners and manufacturers.</p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0">How the process works</h3>
+            <ol style="margin:0;padding-left:18px">
+              <li>Longlist of vaccine candidates and evidence synthesis</li>
+              <li>Technical appraisals: impact, cost-effectiveness, feasibility</li>
+              <li>Prioritisation & Board decisions; funding windows and introductions</li>
+            </ol>
+            <p style="margin-top:10px;font-size:13px;color:#08475f">For the official VIS document and details see the public Gavi VIS resources and insight papers.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chatbot -->
+      <section id="chat" aria-labelledby="chat-title">
+        <h2 id="chat-title">Chatbot (placeholder)</h2>
+        <p>Use this placeholder to plug a domain‑specific chatbot for Gavi‑related vaccine decisions. The chatbot should be connected to an allowed knowledge base and implement safety filters for medical and policy guidance.</p>
+
+        <div class="grid">
+          <div class="card chat">
+            <div class="chat-window" id="chat-window" role="log" aria-live="polite">
+              <div style="opacity:0.6">This is a static placeholder. When you connect an LLM/chatbot backend, messages will appear here.</div>
+            </div>
+            <div class="chat-input">
+              <input id="chat-input" placeholder="Ask the course chatbot about Gavi, VIS, vaccine prioritisation..." aria-label="Chat input" />
+              <button class="btn" onclick="sendMessage()">Send</button>
+            </div>
+            <div style="font-size:13px;color:#08506a">Note: This placeholder does not connect to a live model. To integrate: implement a server endpoint that authenticates requests, calls your model (or OpenAI), and returns messages. Use strict content filtering before presenting policy or clinical recommendations.</div>
+          </div>
+
+          <div class="card">
+            <h4 style="margin-top:0">Integration notes</h4>
+            <ul>
+              <li>Host static page on GitHub Pages (single HTML file).</li>
+              <li>Implement a secure server-side chatbot proxy; avoid exposing API keys in the browser.</li>
+              <li>Log queries and apply moderation for policy/medical safety.</li>
+            </ul>
+            <p style="font-size:13px">Example client call (pseudo): <code>POST /api/chat { prompt, context }</code></p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© Generative AI Course — Gavi style demo</div>
+      <div style="font-size:13px">Resources: <a href="https://www.gavi.org/" target="_blank" rel="noopener">gavi.org</a> · <a href="https://www.gavi.org/our-alliance/strategy/vaccine-investment-strategy-2024" target="_blank" rel="noopener">Vaccine Investment Strategy 2024</a></div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple client-side chat placeholder behavior (no backend calls)
+    function appendMessage(who, text){
+      const win = document.getElementById('chat-window');
+      const el = document.createElement('div');
+      el.style.margin = '8px 0';
+      el.style.padding = '10px';
+      el.style.borderRadius = '10px';
+      if(who === 'user'){
+        el.style.background = 'linear-gradient(90deg, rgba(6,120,160,0.08), rgba(0,160,154,0.06))';
+        el.style.alignSelf = 'flex-end';
+        el.style.textAlign = 'right';
+        el.innerHTML = '<strong>You:</strong><div>'+escapeHtml(text)+'</div>';
+      } else {
+        el.style.background = 'rgba(2,40,60,0.04)';
+        el.innerHTML = '<strong>Bot:</strong><div>'+escapeHtml(text)+'</div>';
+      }
+      win.appendChild(el);
+      win.scrollTop = win.scrollHeight;
+    }
+    function sendMessage(){
+      const input = document.getElementById('chat-input');
+      const text = input.value.trim();
+      if(!text) return;
+      appendMessage('user', text);
+      input.value = '';
+      // Placeholder reply — replace this with real backend call.
+      setTimeout(()=>appendMessage('bot','(placeholder) I can answer course questions about Gavi and VIS once connected.'),600);
+    }
+    function escapeHtml(s){ return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
+
+    // Accessibility: keyboard submit
+    document.getElementById('chat-input').addEventListener('keydown', function(e){ if(e.key === 'Enter'){ sendMessage(); }});
+  </script>
+</body>
+</html>
